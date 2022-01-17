@@ -14,18 +14,23 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" style="background-image: url(./images/header-bg.png);">
         <div class="wrapper-overlay">
-            <div class="container">
+            <div class="container header__container">
                 <div class="header__top">
                     <a class="header__logo" href="#">
                         <img src="./images/logo.png" alt="Logo">
                     </a>
+                    <div class="menu-burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <nav class="menu">
                         <ul class="menu__list list-reset">
                             <li class="menu__list-item">
                                 <a href="#" class="menu__list-link">Facilitation</a>
-                                <ul class="menu__sublist list-reset">
+                                <!-- <ul class="menu__sublist list-reset">
                                     <li class="menu__sublist-item">
                                         <a href="#" class="menu__sublist-link">Howspace</a>
                                     </li>
@@ -44,7 +49,7 @@
                                     <li class="menu__sublist-item">
                                         <a href="#" class="menu__sublist-link">Infinity</a>
                                     </li>
-                                </ul>
+                                </ul> -->
                             </li>
                             <li class="menu__list-item">
                                 <a href="#" class="menu__list-link">Project Management Tools</a>
@@ -82,7 +87,7 @@
                 </div>
                 <div class="header__content">
                     <div class="header__suptitle">
-                        <a class="header__suptitle-link" href="#">get to know the</a> 
+                        <a class="header__suptitle-link suptitle-link" href="#">get to know the</a> 
                     </div>
                     <h1 class="header__title title">
                         Best Digital Facilitation Tools 2021
@@ -93,13 +98,16 @@
                         and easy-to-use digital facilitation tools of 2021?
                     </p>
                     <div class="header__links">
-                        <a class="header__links-item href="#"">Latest News</a>
-                        <a class="header__links-item href="#"">Digital Events</a>
+                        <a class="header__links-item btn-accent-color" href="#">Latest News</a>
+                        <a class="header__links-item header__links-item--icon icon-play" href="#">Digital Events</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/main.js"></script>
 
 </body>
 

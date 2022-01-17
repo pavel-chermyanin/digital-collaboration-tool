@@ -10,6 +10,30 @@ a {
 img {
   max-width: 100%;
 }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  margin: 0;
+  color: #808285;
+  overflow-anchor: none;
+}
+.container {
+  max-width: 1120px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* ==== variable ==== */
+
+:root {
+  --first-accent-color: #ffab5e;
+  --second-accent-color: #007991;
+}
+
+/* ==== reset ==== */
+
 .list-reset {
   margin: 0;
   padding: 0;
@@ -21,35 +45,172 @@ img {
   cursor: pointer;
   padding: 0;
 }
-:root {
-  --first-accent-color: #5d71dd;
-  --second-accent-color: #2f2222;
-}
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  margin: 0;
-  /* background-color: #f9f9f9; */
-  background-color: #000;
-  color: #808285;
-  overflow-anchor: none;
-}
-.container {
-  max-width: 1120px;
-  padding: 0 15px;
-  margin: 0 auto;
+
+/* ==== blocks ==== */
+
+.title {
+  font-size: 70px;
+  line-height: 84px;
+  font-weight: 700;
 }
 
-
-.header__search{
-    position: relative;
+.suptitle-link {
+  padding-left: 19px;
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-/* .header__search::after{
-    position: absolute;
-    content: "\f002";
-    background-color: #fff;
-    width: 19px;
-    height: 19px;
+.suptitle-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  background-color: var(--first-accent-color);
+  border-radius: 50%;
+}
+
+.suptitle-link::after {
+  left: 5px;
+  top: 1px;
+  transform: rotate(-90deg);
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+  border-top: 5px solid rgb(64, 69, 75);
+  z-index: 2;
+}
+.btn-accent-color {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px 24px;
+  background-color: rgb(255, 171, 94);
+  z-index: 1;
+  border-radius: 5px;
+}
+.icon-play::before {
+  display: inline-block;
+  transform: rotate(-90deg);
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 3px;
+  border: 5px solid transparent;
+  border-top: 5px solid #fff;
+  z-index: 2;
+}
+/* ===== header ==== */
+
+.header {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px 0px 150px 0px;
+  color: #fff;
+}
+.wrapper-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(290deg, rgba(0, 121, 145, .9) 50%, rgba(45, 54, 68, .9) 100%);
+  background-color: transparent;
+}
+.header__top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.header__logo {
+  max-width: 75px;
+}
+.menu-burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+  height: 33px;
+  padding: 5px;
+}
+.menu-burger span {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  height: 3px;
+  border-radius: 10px;
+}
+.menu-burger span + span {
+  margin-top: 3px;
+}
+.menu {
+  display: none;
+  background-color: var(--first-accent-color);
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  z-index: 10;
+  opacity: 1;
+}
+.menu__list {
+  text-align: center;
+}
+
+.menu__list-item {
+}
+.menu__list-link {
+  font-size: 14px;
+  line-height: 20px;
+  display: inline-block;
+  padding: 12px 0;
+}
+.menu__sublist {
+}
+.menu__sublist-item {
+}
+.menu__sublist-link {
+}
+.header__search {
+  z-index: 1;
+}
+.header__content {
+  max-width: 630px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+/* .header__suptitle {
+}
+.header__suptitle-link {
+}
+.header__title {
 } */
 
+.header__text {
+  font-size: 20px;
+  line-height: 37px;
+}
+.header__links {
+  margin-top: 50px;
+}
+.header__links-item {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+}
+.header__links-item + .header__links-item {
+  margin-left: 40px;
+}
+.header__links-item--icon {
+  padding-left: 10px;
+}
