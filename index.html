@@ -10,103 +10,352 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <header class="header" style="background-image: url(./images/header-bg.png);">
         <div class="wrapper-overlay">
-            <div class="container header__container">
-                <div class="header__top">
-                    <a class="header__logo" href="#">
-                        <img src="./images/logo.png" alt="Logo">
-                    </a>
-                    <div class="menu-burger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <nav class="menu">
-                        <ul class="menu__list list-reset">
-                            <li class="menu__list-item">
-                                <a href="#" class="menu__list-link">Facilitation</a>
-                                <!-- <ul class="menu__sublist list-reset">
-                                    <li class="menu__sublist-item">
-                                        <a href="#" class="menu__sublist-link">Howspace</a>
-                                    </li>
-                                    <li class="menu__sublist-item">
-                                        <a href="#" class="menu__sublist-link">Viima</a>
-                                    </li>
-                                    <li class="menu__sublist-item">
-                                        <a href="#" class="menu__sublist-link">Monday</a>
-                                    </li>
-                                    <li class="menu__sublist-item">
-                                        <a href="#" class="menu__sublist-link">ClickUp</a>
-                                    </li>
-                                    <li class="menu__sublist-item">
-                                        <a href="#" class="menu__sublist-link">Wrike</a>
-                                    </li>
-                                    <li class="menu__sublist-item">
-                                        <a href="#" class="menu__sublist-link">Infinity</a>
-                                    </li>
-                                </ul> -->
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="#" class="menu__list-link">Project Management Tools</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="#" class="menu__list-link">Online Courses</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a href="#" class="menu__list-link">Articles</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="header__search">
-                        <svg width="17px" height="18px" viewBox="0 0 17 18" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
-                            <title>search</title>
-                            <desc>Created with Sketch.</desc>
-                            <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="Rounded" transform="translate(-545.000000, -421.000000)">
-                                    <g id="Action" transform="translate(100.000000, 100.000000)">
-                                        <g id="-Round-/-Action-/-search" transform="translate(442.000000, 318.000000)">
-                                            <g>
-                                                <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
-                                                <path
-                                                    d="M15.5,14 L14.71,14 L14.43,13.73 C15.63,12.33 16.25,10.42 15.91,8.39 C15.44,5.61 13.12,3.39 10.32,3.05 C6.09,2.53 2.53,6.09 3.05,10.32 C3.39,13.12 5.61,15.44 8.39,15.91 C10.42,16.25 12.33,15.63 13.73,14.43 L14,14.71 L14,15.5 L18.25,19.75 C18.66,20.16 19.33,20.16 19.74,19.75 C20.15,19.34 20.15,18.67 19.74,18.26 L15.5,14 Z M9.5,14 C7.01,14 5,11.99 5,9.5 C5,7.01 7.01,5 9.5,5 C11.99,5 14,7.01 14,9.5 C14,11.99 11.99,14 9.5,14 Z"
-                                                    id="🔹Icon-Color" fill="#fff"></path>
+
+            <div class="header__top">
+                <div class="container header__container">
+                    <div class="header__top-inner">
+                        <a class="header__logo" href="#">
+                            <img src="./images/logo.png" alt="Logo">
+                        </a>
+                        <div class="menu-burger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <nav class="menu">
+                            <ul class="menu__list list-reset">
+                                <li class="menu__list-item">
+                                    <a href="#" class="menu__list-link">Facilitation</a>
+                                    <!-- <ul class="menu__sublist list-reset">
+                                                        <li class="menu__sublist-item">
+                                                            <a href="#" class="menu__sublist-link">Howspace</a>
+                                                        </li>
+                                                        <li class="menu__sublist-item">
+                                                            <a href="#" class="menu__sublist-link">Viima</a>
+                                                        </li>
+                                                        <li class="menu__sublist-item">
+                                                            <a href="#" class="menu__sublist-link">Monday</a>
+                                                        </li>
+                                                        <li class="menu__sublist-item">
+                                                            <a href="#" class="menu__sublist-link">ClickUp</a>
+                                                        </li>
+                                                        <li class="menu__sublist-item">
+                                                            <a href="#" class="menu__sublist-link">Wrike</a>
+                                                        </li>
+                                                        <li class="menu__sublist-item">
+                                                            <a href="#" class="menu__sublist-link">Infinity</a>
+                                                        </li>
+                                                    </ul> -->
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="#" class="menu__list-link">Project Management Tools</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="#" class="menu__list-link">Online Courses</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a href="#" class="menu__list-link">Articles</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header__search">
+                            <svg width="17px" height="18px" viewBox="0 0 17 18" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+                                <title>search</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Rounded" transform="translate(-545.000000, -421.000000)">
+                                        <g id="Action" transform="translate(100.000000, 100.000000)">
+                                            <g id="-Round-/-Action-/-search"
+                                                transform="translate(442.000000, 318.000000)">
+                                                <g>
+                                                    <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                                                    <path
+                                                        d="M15.5,14 L14.71,14 L14.43,13.73 C15.63,12.33 16.25,10.42 15.91,8.39 C15.44,5.61 13.12,3.39 10.32,3.05 C6.09,2.53 2.53,6.09 3.05,10.32 C3.39,13.12 5.61,15.44 8.39,15.91 C10.42,16.25 12.33,15.63 13.73,14.43 L14,14.71 L14,15.5 L18.25,19.75 C18.66,20.16 19.33,20.16 19.74,19.75 C20.15,19.34 20.15,18.67 19.74,18.26 L15.5,14 Z M9.5,14 C7.01,14 5,11.99 5,9.5 C5,7.01 7.01,5 9.5,5 C11.99,5 14,7.01 14,9.5 C14,11.99 11.99,14 9.5,14 Z"
+                                                        id="🔹Icon-Color" fill="#fff"></path>
+                                                </g>
                                             </g>
                                         </g>
                                     </g>
                                 </g>
-                            </g>
-                        </svg>
+                            </svg>
+                        </div>
                     </div>
+
                 </div>
-                <div class="header__content">
-                    <div class="header__suptitle">
-                        <a class="header__suptitle-link suptitle-link" href="#">get to know the</a> 
-                    </div>
-                    <h1 class="header__title title">
-                        Best Digital Facilitation Tools 2021
-                    </h1>
-                    <p class="header__text">
-                        Is your team, organization or business having difficulties with managing and developing projects? There are various
-                        kinds of new tools for powerful and efficient process management. Find the best ones here: what are the most reliable
-                        and easy-to-use digital facilitation tools of 2021?
-                    </p>
-                    <div class="header__links">
-                        <a class="header__links-item btn-accent-color" href="#">Latest News</a>
-                        <a class="header__links-item header__links-item--icon icon-play" href="#">Digital Events</a>
-                    </div>
+
+            </div>
+            <div class="header__content">
+                <div class="header__suptitle">
+                    <a class="header__suptitle-link suptitle-link" href="#">get to know the</a>
+                </div>
+                <h1 class="header__title title">
+                    Best Digital Facilitation Tools 2021
+                </h1>
+                <p class="header__text">
+                    Is your team, organization or business having difficulties with managing and developing
+                    projects? There are various
+                    kinds of new tools for powerful and efficient process management. Find the best ones here: what
+                    are the most reliable
+                    and easy-to-use digital facilitation tools of 2021?
+                </p>
+                <div class="header__links">
+                    <a class="header__links-item btn-accent-color" href="#">Latest News</a>
+                    <a class="header__links-item header__links-item--icon icon-play" href="#">Digital Events</a>
+
                 </div>
             </div>
         </div>
     </header>
+    <div class="info-box">
+        <div class="container">
+            <p class="info-box__text">
+                To organize and facilitate virtual meetings effectively, it’s important to know and understand how to
+                make use of
+                all
+                the available tools. On the other hand it seems like there are tons of options to choose from. How
+                should I find the
+                best one for my needs in particular? Our team of experts has gathered all the best possible facilitation
+                tools that
+                you
+                can use for all sorts of projects.
+            </p>
+        </div>
+    </div>
+    <section class="top-tools">
+        <div class="container">
+            <ul class="top-tools__inner list-reset">
+                <li class="top-tools__item">
+                    <a class="top-tools__link" href="#">
+                        <img class="top-tools__link-img" src="./images/top-tools-item-1.png" alt="">
+                    </a>
+                    <h2 class="top-tools__item-title">Howspace</h2>
+                    <p class="top-tools__item-text">
+                        Howspace is the only tool that is created purely remote facilitation in mind. Its a
+                        comprehensive management tool where
+                        worskpaces are super easy to create.
+                    </p>
+                    <p class="top-tools__item-text">
+                        Howspace is the only tool that is created purely remote facilitation in mind. Its a
+                        comprehensive management tool where
+                        worskpaces are super easy to create.
+                    </p>
+                    <div class="top-tools__box">
+                        <a class="top-tools__item-link btn-accent-color" href="#">
+                            Get Started
+                        </a>
+                    </div>
+                </li>
+                <li class="top-tools__item">
+                    <a class="top-tools__link" href="#">
+                        <img class="top-tools__link-img" src="./images/top-tools-item-2.png" alt="">
+                    </a>
+                    <h2 class="top-tools__item-title">Howspace</h2>
+                    <p class="top-tools__item-text">
+                        Howspace is the only tool that is created purely remote facilitation in mind. Its a
+                        comprehensive management tool where
+                        worskpaces are super easy to create.
+                    </p>
+                    <p class="top-tools__item-text">
+                        Howspace is the only tool that is created purely remote facilitation in mind. Its a
+                        comprehensive management tool where
+                        worskpaces are super easy to create.
+                    </p>
+                    <div class="top-tools__box">
+                        <a class="top-tools__item-link btn-accent-color" href="#">
+                            Get Started
+                        </a>
+                    </div>
+                </li>
+                <li class="top-tools__item">
+                    <a class="top-tools__link" href="#">
+                        <img class="top-tools__link-img" src="./images/top-tools-item-3.png" alt="">
+                    </a>
+                    <h2 class="top-tools__item-title">Howspace</h2>
+                    <p class="top-tools__item-text">
+                        Howspace is the only tool that is created purely remote facilitation in mind. Its a
+                        comprehensive management tool where
+                        worskpaces are super easy to create.
+                    </p>
+                    <p class="top-tools__item-text">
+                        Howspace is the only tool that is created purely remote facilitation in mind. Its a
+                        comprehensive management tool where
+                        worskpaces are super easy to create.
+                    </p>
+                    <div class="top-tools__box">
+                        <a class="top-tools__item-link btn-accent-color" href="#">
+                            Get Started
+                        </a>
+                    </div>
+                </li>
+                <li class="top-tools__item">
+                    <a class="top-tools__link" href="#">
+                        <img class="top-tools__link-img" src="./images/top-tools-item-4.png" alt="">
+                    </a>
+                    <h2 class="top-tools__item-title">Howspace</h2>
+                    <p class="top-tools__item-text">
+                        Howspace is the only tool that is created purely remote facilitation in mind. Its a
+                        comprehensive management tool where
+                        worskpaces are super easy to create.
+                    </p>
+                    <p class="top-tools__item-text">
+                        Howspace is the only tool that is created purely remote facilitation in mind. Its a
+                        comprehensive management tool where
+                        worskpaces are super easy to create.
+                    </p>
+                    <div class="top-tools__box">
+                        <a class="top-tools__item-link btn-accent-color" href="#">
+                            Get Started
+                        </a>
+                    </div>
+                </li>
+                <li class="top-tools__item">
+                    <a class="top-tools__link" href="#">
+                        <img class="top-tools__link-img" src="./images/top-tools-item-5.png" alt="">
+                    </a>
+                    <h2 class="top-tools__item-title">Howspace</h2>
+                    <p class="top-tools__item-text">
+                        Howspace is the only tool that is created purely remote facilitation in mind. Its a
+                        comprehensive management tool where
+                        worskpaces are super easy to create.
+                    </p>
+                    <p class="top-tools__item-text">
+                        Howspace is the only tool that is created purely remote facilitation in mind. Its a
+                        comprehensive management tool where
+                        worskpaces are super easy to create.
+                    </p>
+                    <div class="top-tools__box">
+                        <a class="top-tools__item-link btn-accent-color" href="#">
+                            Get Started
+                        </a>
+                    </div>
+                </li>
+                <li class="top-tools__item">
+                    <a class="top-tools__link" href="#">
+                        <img class="top-tools__link-img" src="./images/top-tools-item-6.png" alt="">
+                    </a>
+                    <h2 class="top-tools__item-title">Howspace</h2>
+                    <p class="top-tools__item-text">
+                        Howspace is the only tool that is created purely remote facilitation in mind. Its a
+                        comprehensive management tool where
+                        worskpaces are super easy to create.
+                    </p>
+                    <p class="top-tools__item-text">
+                        Howspace is the only tool that is created purely remote facilitation in mind. Its a
+                        comprehensive management tool where
+                        worskpaces are super easy to create.
+                    </p>
+                    <div class="top-tools__box">
+                        <a class="top-tools__item-link btn-accent-color" href="#">
+                            Get Started
+                        </a>
+                    </div>
+                </li>
+                <li class="top-tools__item">
+                    <a class="top-tools__link" href="#">
+                        <img class="top-tools__link-img" src="./images/top-tools-item-7.png" alt="">
+                    </a>
+                    <h2 class="top-tools__item-title">Howspace</h2>
+                    <p class="top-tools__item-text">
+                        Howspace is the only tool that is created purely remote facilitation in mind. Its a
+                        comprehensive management tool where
+                        worskpaces are super easy to create.
+                    </p>
+                    <p class="top-tools__item-text">
+                        Howspace is the only tool that is created purely remote facilitation in mind. Its a
+                        comprehensive management tool where
+                        worskpaces are super easy to create.
+                    </p>
+                    <div class="top-tools__box">
+                        <a class="top-tools__item-link btn-accent-color" href="#">
+                            Get Started
+                        </a>
+                    </div>
+                </li>
+                <li class="top-tools__item">
+                    <a class="top-tools__link" href="#">
+                        <img class="top-tools__link-img" src="./images/top-tools-item-8.png" alt="">
+                    </a>
+                    <h2 class="top-tools__item-title">Howspace</h2>
+                    <p class="top-tools__item-text">
+                        Howspace is the only tool that is created purely remote facilitation in mind. Its a
+                        comprehensive management tool where
+                        worskpaces are super easy to create.
+                    </p>
+                    <p class="top-tools__item-text">
+                        Howspace is the only tool that is created purely remote facilitation in mind. Its a
+                        comprehensive management tool where
+                        worskpaces are super easy to create.
+                    </p>
+                    <div class="top-tools__box">
+                        <a class="top-tools__item-link btn-accent-color" href="#">
+                            Get Started
+                        </a>
+                    </div>
+                </li>
 
+
+            </ul>
+        </div>
+    </section>
+    <div class="video">
+        <div class="container">
+            <iframe src="https://www.youtube.com/embed/mGgVj3qNLkU" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p class="video__suptext">
+                What makes a great digital facilitation tool? The best facilitation tools provide facilitators and
+                participants
+                everything they need for workshops and meetings online. Since the corona pandemic has effected every
+                aspect of our
+                everyday life, businesses and organizations need these online facilitation tools more than ever.
+            </p>
+            <div class="video__box">
+                <div class="video__box-text">
+                    <p>
+                        In fact, remote work is becoming the new normal on many fields and industries. Hybrid model is projected to be the way
+                        to go in the future. Here digital facilitation software and professional facilitators are needed more than ever. Having
+                        the knowledge of various
+                        <a href="#">
+                            tools for remote work
+                        </a>
+                        is also becoming imporant.
+                    </p>
+                    <p>
+                        Digitalcollaborationtool.com is not just about virtual facilitation. Our site was created so
+                        that we could share
+                        articles and insights on all kinds of digital collaboration tools, such as
+                        <a href="#">
+                            tools for remote project management
+                        </a>
+                    </p>
+                    <p>
+                        The global digital economy is depended on many types of digital software. Remote work and hybrid
+                        models require various
+                        tools for companies and organizations, starting sometimes from the most simple things, such as
+                        VPN services.
+                    </p>
+                    <p>
+                        With our articles and guides you will learn more about all types of digital collaboration tools!
+                    </p>
+                </div>
+                <div class="video__box-img">
+                    <img src="./images/video-img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/main.js"></script>
 
 </body>
