@@ -178,7 +178,26 @@ body {
   background-image: url(../images/arrow-down.png);
   background-size: contain;
 }
-
+.title-second-color {
+  font-size: 30px;
+  line-height: 39px;
+  font-weight: 700;
+  color: var(--second-accent-color);
+}
+.check-list > li{
+  padding-left: 35px;
+  position: relative;
+}
+.check-list > li::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 29px;
+  background-image: url(../images/check-icon.png);
+  background-size: contain;
+}
 /* ===== header ==== */
 
 .header {
@@ -224,6 +243,8 @@ body {
   max-width: 75px;
 }
 .menu-burger {
+  margin-left: auto;
+  margin-right: 30px;
   position: relative;
   cursor: pointer;
   display: flex;
@@ -304,6 +325,7 @@ body {
 }
 .header__search {
   z-index: 1;
+  padding-top: 7px;
 }
 .header__content {
   max-width: 630px;
@@ -343,18 +365,22 @@ body {
 
 /* ==== info-text ==== */
 
-info-box {
+.info-box {
+  margin-bottom: 80px;
 }
 .info-box__text {
   font-size: 20px;
   line-height: 37px;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 /* ==== top-tools ==== */
 
 .top-tools {
   margin-bottom: var(--margin-botom);
+}
+.top-tools__title {
+  margin-bottom: 50px;
 }
 .top-tools__inner {
   display: grid;
@@ -851,18 +877,18 @@ input.main-form__submit {
   .popular-courses__info {
     min-width: 250px;
   }
-  .footer__inner{
+  .footer__inner {
     flex-wrap: wrap;
   }
-  .footer__item{
+  .footer__item {
     margin-left: 10px;
     margin-bottom: 30px;
   }
-  .footer__item:nth-child(4){
+  .footer__item:nth-child(4) {
     max-width: 100%;
     width: 100%;
   }
-  .footer__item-title{
+  .footer__item-title {
     margin-bottom: 10px;
   }
 }
@@ -918,10 +944,10 @@ input.main-form__submit {
     margin-bottom: 20px;
   }
   .header {
-    height: 55vh;
+    height: 70vh;
   }
   .header__content {
-    height: 60vh;
+    height: 80vh;
   }
   .header__text {
     font-size: 15px;
@@ -959,11 +985,11 @@ input.main-form__submit {
   .popular-courses__link {
     margin-left: 0;
   }
-  .footer__inner{
-    display: block;
+  .footer__inner {
+    flex-direction: column;
     padding: 30px 0;
   }
-  .footer__item{
+  .footer__item {
     max-width: 100%;
     width: 100%;
   }
@@ -1048,10 +1074,10 @@ input.main-form__submit {
 
 @media (max-width: 480px) {
   .header {
-    height: 65vh;
+    height: 80vh;
   }
   .header__content {
-    height: 70vh;
+    height: 80vh;
   }
   .title {
     font-size: 34px;
@@ -1067,13 +1093,19 @@ input.main-form__submit {
   .benefits__box-subtitle {
     margin-bottom: 20px;
   }
-  .footer__copy p{
+  .footer__copy p {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
   }
-  .footer__copy p span{
+  .footer__copy p span {
     margin-bottom: 20px;
+  }
+  .video iframe {
+    min-height: 230px;
+  }
+  .video__box-img {
+    min-width: 100%;
   }
 }
 
