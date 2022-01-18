@@ -114,6 +114,24 @@ body {
   border-top: 5px solid #fff;
   z-index: 2;
 }
+
+.title-supline {
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: var(--margin-botom);
+}
+.title-supline::after {
+  top: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 45px;
+  border-bottom: 4px dashed var(--first-accent-color);
+  transform: skewX(-45deg);
+}
 /* ===== header ==== */
 
 .header {
@@ -302,36 +320,36 @@ info-box {
 
 /* ==== video ==== */
 
-.video{
+.video {
   margin-bottom: 100px;
 }
-.video iframe{
+.video iframe {
   min-height: 650px;
   width: 100%;
   margin-bottom: 20px;
 }
-.video__suptext{
+.video__suptext {
   font-size: 18px;
   line-height: 33px;
   margin-bottom: 50px;
 }
-.video__box{
+.video__box {
   display: flex;
   justify-content: space-between;
 }
-.video__box-text{
+.video__box-text {
   max-width: 550px;
   margin-right: var(--margin-botom);
 }
-.video__box-text p{
+.video__box-text p {
   font-size: 18px;
   line-height: 33px;
   margin-bottom: var(--margin-botom);
 }
 .video__box-text a {
-  color: rgb(7,7,7)
+  color: rgb(7, 7, 7);
 }
-.video__box-img{
+.video__box-img {
   min-width: 350px;
 }
 .popular-courses {
@@ -340,7 +358,6 @@ info-box {
 .popular-courses__inner {
   display: flex;
   /* justify-content: space-between; */
-
 }
 .popular-courses__info {
   min-width: 400px;
@@ -360,7 +377,7 @@ info-box {
 .popular-courses__desc {
   display: flex;
   justify-content: space-between;
-  align-items:flex-start ;
+  align-items: flex-start;
 }
 .popular-courses__text {
   font-size: 17px;
@@ -371,4 +388,85 @@ info-box {
 .popular-courses__link {
   margin-left: 50px;
 }
+.benefits {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: cover;
+  padding: 80px 0;
+  margin-bottom: 100px;
+}
 
+.benefits__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.benefits__item {
+  position: relative;
+  max-width: 213px;
+  color: #fff;
+}
+.benefits__item-title {
+  margin-bottom: var(--margin-botom);
+}
+.title-supline {
+}
+.benefits__item-text {
+  font-size: 16px;
+  line-height: 30px;
+  color: #fff;
+}
+.benefits__box {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 380px;
+  position: relative;
+  margin-bottom: -80px;
+  padding: 40px 40px 30px;
+}
+.benefits__box-title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 35px;
+  color: rgb(22, 22, 22);
+  margin-bottom: var(--margin-botom);
+}
+.benefits__box-subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--second-accent-color);
+  margin-bottom: 50px;
+}
+.benefits__box-link {
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  padding-left: 10px;
+  position: relative;
+}
+.benefits__box-link::before{
+ border-top: 5px solid #000;
+}
+.questions {
+}
+.questions__inner {
+}
+.questions__box {
+}
+.questions__box-suptitle {
+}
+.questions__box-title {
+}
+.questions__box-text {
+}
+.questions__box-list {
+}
+.questions__box-item {
+}
+.questions__box-item-link {
+}
+.questions__box-item-title {
+}
+.questions__box-item-text {
+}
