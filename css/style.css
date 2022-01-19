@@ -54,6 +54,18 @@ body {
   cursor: pointer;
   padding: 0;
 }
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 
 /* ==== blocks ==== */
 
@@ -184,19 +196,55 @@ body {
   font-weight: 700;
   color: var(--second-accent-color);
 }
-.check-list > li{
+.check-list > li {
   padding-left: 35px;
   position: relative;
 }
-.check-list > li::before{
-  content: '';
+.check-list > li::before {
+  content: "";
   position: absolute;
   left: 0;
-  top: 0;
+  top: 8px;
   width: 28px;
   height: 29px;
   background-image: url(../images/check-icon.png);
   background-size: contain;
+}
+.list-plus > li,
+.list-minus > li {
+  padding-left: 40px;
+  position: relative;
+}
+.list-plus > li::before {
+  transform: translateY(18px);
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 4px;
+  background-color: var(--first-accent-color);
+  border-radius: 20px;
+}
+.list-plus > li::after {
+  transform: rotate(90deg);
+  content: "";
+  position: absolute;
+  bottom: 17px;
+  left: 0px;
+  width: 25px;
+  height: 4px;
+  background-color: var(--first-accent-color);
+  border-radius: 20px;
+}
+.list-minus > li::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 0;
+  width: 25px;
+  height: 4px;
+  background-color: var(--first-accent-color);
+  border-radius: 20px;
 }
 /* ===== header ==== */
 
@@ -836,6 +884,72 @@ input.main-form__submit {
   align-items: center;
   color: #fff;
   font-size: 15px;
+}
+
+/* ==== description-tools ==== */
+
+.description-tools {
+  font-size: 18px;
+  line-height: 33px;
+  color: #000;
+  margin-bottom: 60px;
+}
+.description-tools__title {
+  margin-bottom: 50px;
+}
+
+/* ==== best-projects ==== */
+
+.best-projects {
+  margin-bottom: 50px;
+}
+.best-projects__list {
+  font-size: 21px;
+  line-height: 39px;
+  color: #000;
+}
+.remote-projects {
+}
+
+.remote-projects__title {
+}
+
+.remote-projects__list {
+}
+
+.remote-projects__list-item {
+  color: #000;
+  display: flex;
+  flex-direction: column;
+}
+.remote-projects__list-img {
+  max-width: 240px;
+  margin: 0 auto;
+  margin-bottom: var(--margin-botom);
+}
+.remote-projects__list-title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 35px;
+  margin-bottom: var(--margin-botom);
+  color: var(--second-accent-color);
+}
+.remote-projects__list-text {
+  font-size: 18px;
+  line-height: 33px;
+  margin-bottom: var(--margin-botom);
+}
+.remote-projects__compare-box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 21px;
+  line-height: 39px;
+  margin-bottom: var(--margin-botom);
+}
+.remote-projects__compare-box-list {
+}
+.remote-projects__link{
+  align-self: center;
 }
 
 /* ====== adptive ======= */
