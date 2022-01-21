@@ -1132,6 +1132,11 @@ input.main-form__submit {
   .best-courses-img {
     max-width: 350px;
   }
+  .description__list-img {
+  max-width: 70%;
+  align-self: center;
+  margin-bottom: var(--margin-botom);
+}
 }
 @media (max-width: 850px) {
   .video {
