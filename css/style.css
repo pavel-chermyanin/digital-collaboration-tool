@@ -961,13 +961,13 @@ input.main-form__submit {
   flex-direction: column;
   margin-bottom: 50px;
 }
-.description__list-item ol:last-child{
+.description__list-item ol:last-child {
   margin-bottom: 0;
 }
-.description__list-item ul:last-child{
+.description__list-item ul:last-child {
   margin-bottom: 0;
 }
-.description__list-item p:last-child{
+.description__list-item p:last-child {
   margin-bottom: 0;
 }
 .description__list-title {
@@ -1002,13 +1002,87 @@ input.main-form__submit {
   border-bottom: none;
 }
 
+/* ==== description__text ==== */
+
+.description__text {
+  margin-bottom: 100px;
+}
+.description__text p {
+  font-size: 20px;
+  line-height: 37px;
+}
+.description__text a {
+  color: rgb(7, 7, 7);
+}
+
+/* ==== best-courses ==== */
+
+.best-courses {
+  margin-bottom: 200px;
+}
+.best-courses__title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(4, 4, 4);
+  margin-bottom: 60px;
+}
+.best-courses__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+.best-courses-img {
+  margin-bottom: var(--margin-botom);
+  transition: all 0.3s ease-in-out;
+  width: auto;
+  max-width: 500px;
+}
+.best-courses-img:hover {
+  transform: scale(1.05);
+}
+.best-courses__item {
+  display: flex;
+  flex-direction: column;
+}
+.best-courses__item + .best-courses__item {
+  margin-left: var(--margin-botom);
+}
+.best-courses__item-title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 35px;
+  color: var(--second-accent-color);
+  margin-bottom: 20px;
+}
+.best-courses__item-text {
+  font-size: 16px;
+  line-height: 29px;
+  margin-bottom: var(--margin-botom);
+}
+.best-courses__item-box {
+   margin-top: auto;
+  text-align: center;
+}
+.best-courses__link-img {
+  text-align: center;
+}
+
 /* ====== adptive ======= */
+@media (max-width: 1230px) {
+  .header__content {
+    padding-left: var(--margin-botom);
+  }
+}
 @media (max-width: 1100px) {
   .video iframe {
     min-height: 500px;
   }
   .popular-courses__link {
     min-width: 126px;
+  }
+  .best-courses-img {
+    max-width: 420px;
   }
 }
 @media (max-width: 1024px) {
@@ -1029,9 +1103,6 @@ input.main-form__submit {
   .top-tools__inner {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 60px 40px;
-  }
-  .description__list-img{
-    max-width: 60%;
   }
 }
 @media (max-width: 965px) {
@@ -1057,6 +1128,9 @@ input.main-form__submit {
   }
   .footer__item-title {
     margin-bottom: 10px;
+  }
+  .best-courses-img {
+    max-width: 350px;
   }
 }
 @media (max-width: 850px) {
@@ -1112,6 +1186,9 @@ input.main-form__submit {
     font-size: 18px;
     line-height: 28px;
   }
+  .best-courses-img {
+    max-width: 320px;
+  }
 }
 @media (max-width: 768px) {
   .title {
@@ -1123,6 +1200,7 @@ input.main-form__submit {
     height: 70vh;
   }
   .header__content {
+    padding-left: 0;
     height: 80vh;
   }
   .header__text {
@@ -1169,6 +1247,22 @@ input.main-form__submit {
     max-width: 100%;
     width: 100%;
   }
+  .best-courses__inner {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 40px;
+  }
+  .best-courses-img{
+    max-width: 70%;
+  }
+  .best-courses__item{
+    text-align: center;
+  }
+  .best-courses__item + .best-courses__item{
+    margin-left: 0;
+  }
+  .best-courses {
+  margin-bottom: 100px;
+}
 }
 @media (max-width: 730px) {
   .benefits__inner {
@@ -1298,6 +1392,27 @@ input.main-form__submit {
   }
   .video__box-img {
     min-width: 100%;
+  }
+}
+@media (max-width: 420px) {
+  .title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .header__content {
+    height: 86vh;
+  }
+  .header__links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .header__links-item {
+    place-self: flex-start;
+  }
+  .header__links-item + .header__links-item {
+    margin-top: 20px;
+    margin-left: 15px;
   }
 }
 
