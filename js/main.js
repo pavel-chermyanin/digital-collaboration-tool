@@ -4,4 +4,10 @@ $(function(){
         $('.menu-burger').toggleClass('active');
     });
 
+
+    $('.btn-sub-list').on('click', function() {
+        $('.menu__sublist').toggleClass('menu__sublist--active');
+    })
+    
+
 });
