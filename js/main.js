@@ -7,7 +7,8 @@ $(function(){
 
     $('.btn-sub-list').on('click', function() {
         $('.menu__sublist').toggleClass('menu__sublist--active');
+        $('.arrow-down').toggleClass('menu__list-item--sub-menu-active');
     })
     
-
+    
 });
