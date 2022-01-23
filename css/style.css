@@ -245,6 +245,22 @@ body {
   background-color: #e5741e;
   border-radius: 20px;
 }
+.vertical-line-plus .list-plus > li,
+.vertical-line-plus .list-minus > li{
+  padding-left: 20px;
+}
+.vertical-line-plus .list-plus > li::before{
+  width: 12px;
+  height: 3px;
+}
+.vertical-line-plus .list-plus > li::after{
+  width: 12px;
+  height: 3px;
+}
+.vertical-line-plus .list-minus > li::before{
+  width: 12px;
+  height: 3px;
+}
 .circle-list {
   list-style: disc;
 }
@@ -557,6 +573,7 @@ body {
 .video {
   margin-bottom: 100px;
 }
+
 .video iframe {
   min-height: 650px;
   width: 100%;
@@ -566,6 +583,14 @@ body {
   font-size: 18px;
   line-height: 33px;
   margin-bottom: 50px;
+}
+.video-cours .video__suptext {
+  font-size: 16px;
+  line-height: 29px;
+  margin-bottom: 30px;
+}
+.video-cours .video__suptext a {
+  color: rgb(7, 7, 7);
 }
 .video__box {
   display: flex;
@@ -685,6 +710,38 @@ body {
 }
 .benefits__box-link::before {
   border-top: 5px solid #000;
+}
+.benefits-cours {
+  padding: 80px 0 50px;
+  margin-bottom: var(--margin-botom);
+}
+.benefits-cours .benefits__box-suptitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgb(7, 7, 7);
+  margin-bottom: var(--margin-botom);
+}
+.benefits-cours .benefits__box-title {
+  color: var(--third-accent-color);
+}
+.benefits__list {
+  margin-left: 30px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.benefits__list .benefits__item {
+  width: 300px;
+}
+.benefits__list .benefits__item--3span {
+  grid-column: 3 span;
+  width: 100%;
+  max-width: 100%;
+}
+.benefits__list .benefits__item:last-child {
+  grid-column: 3 span;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* ==== questions ==== */
@@ -891,14 +948,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
 }
-.main-form__input-name {
-}
-.main-form__input-name::placeholder {
-}
-.main-form__input-email {
-}
-.main-form__input-site {
-}
+
 .main-form__input-saveme {
   margin-right: 20px;
 }
@@ -964,6 +1014,9 @@ input.main-form__submit {
   color: #fff;
   font-size: 15px;
 }
+.footer__item--contacts{
+  max-width: 260px;
+}
 
 /* ==== description-tools ==== */
 
@@ -989,14 +1042,6 @@ input.main-form__submit {
 }
 .best-projects__title {
   margin-bottom: 30px;
-}
-.remote-projects {
-}
-
-.remote-projects__title {
-}
-
-.remote-projects__list {
 }
 
 .remote-projects__list-item {
@@ -1037,8 +1082,6 @@ input.main-form__submit {
 
 .description {
   color: #000;
-}
-.description__list {
 }
 .description__list-item {
   display: flex;
@@ -1234,6 +1277,30 @@ input.main-form__submit {
   font-size: 15px;
   line-height: 27px;
 }
+.vertical-line-cours .vertical-line__suptitle {
+  color: rgb(7, 7, 7);
+}
+.vertical-line-cours .vertical-line__text {
+  font-size: 16px;
+  line-height: 29px;
+}
+.vertical-line-cours .vertical-line__text a {
+  color: rgb(7, 7, 7);
+}
+.vertical-line-cours .vertical-line__item {
+  flex: 1;
+}
+.vertical-line-cours .vertical-line__item:first-child {
+  max-width: 380px;
+}
+.vertical-line-cours .vertical-line__text + .vertical-line__text {
+  margin-top: 20px;
+}
+.vertical-line-plus .vertical-line__item-list{
+  font-size: 15px;
+  line-height: 27px;
+  color: rgb(7, 7, 7);
+}
 
 /* ====== features ====== */
 
@@ -1260,31 +1327,42 @@ input.main-form__submit {
 
 /* ===== price ===== */
 
-.price__list{
-  display: flex;
-  justify-content: space-between;
+.price {
+  margin-bottom: 100px;
+}
+.price__list {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+.price__img {
+  text-align: center;
 }
 
-.price__list-item{
+.price__list-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 285px;
   text-align: center;
+  border: 1px solid #ccc;
+  padding: 40px 20px;
 }
-.price__list-title{
+
+.price__list-title {
   font-size: 45px;
   line-height: 54px;
   font-weight: 700;
   color: #000;
 }
-.price__list-subtitle{
+.price__list-subtitle {
   font-size: 15px;
   line-height: 27px;
   color: rgb(4, 4, 4);
   margin-bottom: 60px;
 }
-.price__list-cost{
+.price__list-cost {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -1294,29 +1372,146 @@ input.main-form__submit {
   font-weight: 900;
   margin-bottom: 50px;
 }
-.price__list-cost--fixed{
-  font-size: 47px;
+.price__list-cost--fixed {
+  font-size: 40px;
 }
-.price__list-currency{
+.price__list-currency {
   font-size: 29px;
   line-height: 29px;
 }
-.price__list-month{
+.price__list-month {
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
 }
-.price__list-text{
+.price__list-text {
   margin: 0 auto;
   font-size: 16px;
   line-height: 27px;
   margin-bottom: var(--margin-botom);
   max-width: 180px;
 }
-.price__list-link{
+.price__list-link {
   margin-top: auto;
   width: 180px;
+  text-transform: uppercase;
 }
+
+/* ====== description-cours ======= */
+
+.description-cours {
+  padding: 80px 0;
+  background-color: rgb(31, 149, 173);
+  color: #fff;
+  margin-bottom: 80px;
+}
+.description-cours__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.description-cours__suptitle {
+  font-size: 15px;
+  line-height: 27px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.description-cours__title {
+  position: relative;
+  max-width: 320px;
+  font-size: 55px;
+  padding-bottom: 20px;
+}
+.description-cours__title::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--first-accent-color);
+}
+.description-cours__list {
+  max-width: 610px;
+}
+.description-cours__list-item {
+  position: relative;
+  padding-left: 30px;
+}
+.description-cours__list-item + .description-cours__list-item {
+  margin-top: 40px;
+}
+.description-cours__list-item svg {
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+.description-cours__list-title {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.description-cours__list-text {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+}
+
+/* ===== includes-box ===== */
+
+.includes-box{
+  font-size: 16px;
+  line-height: 29px;
+}
+
+/* ===== card-box ===== */
+
+.card-box__inner{
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 60px;
+}
+.card-box__item{
+  padding-bottom: 20px;
+  max-width: 340px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 64px 200px 0px;
+  border-radius: 20px;
+}
+.card-box__item-img{
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+.card-box__item-title{
+  padding: 0 40px;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--second-accent-color);
+}
+.card-box__item-text{
+  padding: 0 40px;
+  font-size: 15px;
+  line-height: 27px;
+}
+
+
+/* ====== offer-box ======= */
+
+.offer-box{
+  margin-bottom: 50px;
+}
+.offer-box__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.offer-box__title{
+  font-size: 30px;
+  color: var(--third-accent-color);
+  margin-bottom: 20px;
+}
+
 
 /* ====== adptive ======= */
 @media (max-width: 1230px) {
@@ -1333,6 +1528,9 @@ input.main-form__submit {
   }
   .best-courses-img {
     max-width: 420px;
+  }
+  .price__list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 1024px) {
@@ -1403,6 +1601,26 @@ input.main-form__submit {
   .features__title {
     font-size: 22px;
     max-width: 233px;
+  }
+  .price__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .benefits-cours .benefits__inner {
+    padding-left: 40px;
+  }
+  .benefits-cours {
+    padding: 40px 0 30px;
+
+  }
+  .benefits-cours .benefits__list {
+    margin-left: 0;
+  }
+  .benefits-cours .benefits__box {
+    margin-bottom: 30px;
+    padding: 20px 40px 20px;
+  }
+  .benefits-cours .benefits__item {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 850px) {
@@ -1477,6 +1695,23 @@ input.main-form__submit {
   }
   .features__list + .features__list {
     margin-top: 20px;
+  }
+  .description-cours__list {
+    max-width: 451px;
+  }
+  .card-box__inner{
+    display: block;
+  }
+  .card-box__item{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .card-box__item-img{
+    align-self: center;
+  }
+  .card-box__item + .card-box__item{
+    margin-top: var(--margin-botom);
   }
 }
 @media (max-width: 768px) {
@@ -1571,6 +1806,39 @@ input.main-form__submit {
     margin-top: var(--margin-botom);
     padding-left: 0;
     border-left: none;
+  }
+  .description-cours__inner {
+    display: block;
+    text-align: center;
+  }
+  .description-cours__list {
+    max-width: 100%;
+  }
+  .description-cours__list-item {
+    padding-left: 0;
+  }
+  .description-cours__list-item svg {
+    position: static;
+    margin-bottom: 10px;
+  }
+  .description-cours__title {
+    max-width: 100%;
+    font-size: 35px;
+    margin-bottom: var(--margin-botom);
+  }
+  .description-cours__title:before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .benefits-cours .benefits__list {
+    display: block;;
+  }
+  .benefits-cours .benefits__item {
+    width: 100%;
+    max-width: 100%;
+  }
+  .vertical-line-plus{
+    padding-left: 50px;
   }
 }
 @media (max-width: 730px) {
@@ -1672,6 +1940,18 @@ input.main-form__submit {
     font-size: 16px;
     line-height: 29px;
   }
+  .price__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .price__list-item {
+    max-width: 90%;
+  }
+  .price__list-text {
+    max-width: 90%;
+  }
+  .benefits-cours .benefits__inner {
+    padding-left: 0;
+}
 }
 
 @media (max-width: 480px) {
@@ -1708,6 +1988,32 @@ input.main-form__submit {
   }
   .video__box-img {
     min-width: 100%;
+  }
+  .price__list-item {
+    padding: 30px 10px;
+    width: 100%;
+  }
+  .price__list-title {
+    font-size: 30px;
+  }
+  .price__list-subtitle {
+    margin-bottom: var(--margin-botom);
+  }
+  .description-cours__title {
+    font-size: 28px;
+  }
+  .description-cours__list-title {
+    font-size: 21px;
+  }
+  .card-box__item-title{
+    padding: 0 20px;
+  }
+  .card-box__item-text {
+    padding: 0 20px;
+
+}
+.vertical-line-plus{
+    padding-left: 0;
   }
 }
 @media (max-width: 420px) {
