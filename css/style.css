@@ -743,6 +743,18 @@ body {
   width: 100%;
   max-width: 100%;
 }
+.benefits__list-monday{
+  grid-template-columns: repeat(4, 1fr);
+}
+.benefits__list-monday .benefits__item--3span {
+  grid-column: 1 span;
+}
+.benefits__list-monday .benefits__item{
+  width: 150px;
+}
+.benefits__item--4column{
+  grid-column: 4 span;
+}
 
 /* ==== questions ==== */
 
@@ -1330,6 +1342,7 @@ vertical-line-plus
 /* ===== price ===== */
 
 .price {
+  margin-top: 60px;
   margin-bottom: 100px;
 }
 .price__list {
@@ -1340,6 +1353,7 @@ vertical-line-plus
 }
 .price__img {
   text-align: center;
+  margin-bottom: 50px;
 }
 .price__text {
   font-size: 16px;
@@ -1355,6 +1369,7 @@ vertical-line-plus
 }
 
 .price__list-item {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1388,6 +1403,7 @@ vertical-line-plus
 }
 .price__list-cost--fixed {
   font-size: 40px;
+  line-height: 40px;
 }
 .price__list-currency {
   font-size: 29px;
@@ -1536,13 +1552,21 @@ vertical-line-plus
 
 /* ===== viima-text ===== */
 
-.viima-text{
+.viima-text,
+.monday-text{
   font-size: 16px;
   line-height: 29px;
   margin-bottom: 50px;
 }
-.viima-text p{
+.viima-text p,
+.monday-text p{
   margin-bottom: var(--margin-botom);
+}
+
+/* ===== monday-text ====== */
+
+.monday-text a{
+  color: rgb(7, 7, 7);
 }
 
 /* ====== adptive ======= */
@@ -1878,6 +1902,9 @@ vertical-line-plus
     transform: translateX(-50%);
   }
   .benefits-cours .benefits__list {
+    display: block;
+  }
+  .benefits-cours .benefits__inner {
     display: block;
   }
   .benefits-cours .benefits__item {
