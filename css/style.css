@@ -246,18 +246,18 @@ body {
   border-radius: 20px;
 }
 .vertical-line-plus .list-plus > li,
-.vertical-line-plus .list-minus > li{
+.vertical-line-plus .list-minus > li {
   padding-left: 20px;
 }
-.vertical-line-plus .list-plus > li::before{
+.vertical-line-plus .list-plus > li::before {
   width: 12px;
   height: 3px;
 }
-.vertical-line-plus .list-plus > li::after{
+.vertical-line-plus .list-plus > li::after {
   width: 12px;
   height: 3px;
 }
-.vertical-line-plus .list-minus > li::before{
+.vertical-line-plus .list-minus > li::before {
   width: 12px;
   height: 3px;
 }
@@ -1014,7 +1014,7 @@ input.main-form__submit {
   color: #fff;
   font-size: 15px;
 }
-.footer__item--contacts{
+.footer__item--contacts {
   max-width: 260px;
 }
 
@@ -1296,11 +1296,12 @@ input.main-form__submit {
 .vertical-line-cours .vertical-line__text + .vertical-line__text {
   margin-top: 20px;
 }
-.vertical-line-plus .vertical-line__item-list{
+.vertical-line-plus .vertical-line__item-list {
   font-size: 15px;
   line-height: 27px;
   color: rgb(7, 7, 7);
 }
+vertical-line-plus
 
 /* ====== features ====== */
 
@@ -1323,6 +1324,7 @@ input.main-form__submit {
   line-height: 27px;
   margin-left: var(--margin-botom);
   max-width: 343px;
+  color: rgb(84, 89, 95);
 }
 
 /* ===== price ===== */
@@ -1338,6 +1340,18 @@ input.main-form__submit {
 }
 .price__img {
   text-align: center;
+}
+.price__text {
+  font-size: 16px;
+  line-height: 29px;
+  color: rgb(122, 122, 122);
+  margin-bottom: var(--margin-botom);
+}
+.price__text:last-of-type {
+  margin-bottom: 100px;
+}
+.price__text a {
+  color: rgb(7, 7, 7);
 }
 
 .price__list-item {
@@ -1395,6 +1409,15 @@ input.main-form__submit {
   margin-top: auto;
   width: 180px;
   text-transform: uppercase;
+}
+.price-3column .price__list {
+  grid-template-columns: repeat(3, 1fr);
+}
+.price-3column .price__list-item {
+  min-width: 355px;
+}
+.price-3column .price__list-text {
+  max-width: 200px;
 }
 
 /* ====== description-cours ======= */
@@ -1458,62 +1481,72 @@ input.main-form__submit {
 
 /* ===== includes-box ===== */
 
-.includes-box{
+.includes-box {
   font-size: 16px;
   line-height: 29px;
 }
 
 /* ===== card-box ===== */
 
-.card-box__inner{
+.card-box__inner {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 60px;
 }
-.card-box__item{
+.card-box__item {
   padding-bottom: 20px;
   max-width: 340px;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 64px 200px 0px;
   border-radius: 20px;
 }
-.card-box__item-img{
+.card-box__item-img {
   border-radius: 20px;
   margin-bottom: 30px;
 }
-.card-box__item-title{
+.card-box__item-title {
   padding: 0 40px;
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 20px;
   color: var(--second-accent-color);
 }
-.card-box__item-text{
+.card-box__item-text {
   padding: 0 40px;
   font-size: 15px;
   line-height: 27px;
 }
 
-
 /* ====== offer-box ======= */
 
-.offer-box{
+.offer-box {
   margin-bottom: 50px;
 }
-.offer-box__inner{
+.offer-box__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-.offer-box__title{
+.offer-box__title {
   font-size: 30px;
   color: var(--third-accent-color);
   margin-bottom: 20px;
 }
 
+/* ===== viima-text ===== */
+
+.viima-text{
+  font-size: 16px;
+  line-height: 29px;
+  margin-bottom: 50px;
+}
+.viima-text p{
+  margin-bottom: var(--margin-botom);
+}
 
 /* ====== adptive ======= */
+
 @media (max-width: 1230px) {
   .header__content {
     padding-left: var(--margin-botom);
@@ -1531,6 +1564,11 @@ input.main-form__submit {
   }
   .price__list {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1150px) {
+  .price-3column .price__list-item {
+    min-width: 300px;
   }
 }
 @media (max-width: 1024px) {
@@ -1564,6 +1602,9 @@ input.main-form__submit {
   }
   .features__list {
     margin-left: 10px;
+  }
+  .price-3column .price__list-item {
+    min-width: 280px;
   }
 }
 @media (max-width: 965px) {
@@ -1610,7 +1651,6 @@ input.main-form__submit {
   }
   .benefits-cours {
     padding: 40px 0 30px;
-
   }
   .benefits-cours .benefits__list {
     margin-left: 0;
@@ -1621,6 +1661,13 @@ input.main-form__submit {
   }
   .benefits-cours .benefits__item {
     margin-bottom: 0;
+  }
+  .price-3column .price__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .price-3column .price__list-item {
+    grid-template-columns: repeat(2, 1fr);
+    min-width: 300px;
   }
 }
 @media (max-width: 850px) {
@@ -1699,18 +1746,18 @@ input.main-form__submit {
   .description-cours__list {
     max-width: 451px;
   }
-  .card-box__inner{
+  .card-box__inner {
     display: block;
   }
-  .card-box__item{
+  .card-box__item {
     display: flex;
     flex-direction: column;
     max-width: 100%;
   }
-  .card-box__item-img{
+  .card-box__item-img {
     align-self: center;
   }
-  .card-box__item + .card-box__item{
+  .card-box__item + .card-box__item {
     margin-top: var(--margin-botom);
   }
 }
@@ -1831,13 +1878,13 @@ input.main-form__submit {
     transform: translateX(-50%);
   }
   .benefits-cours .benefits__list {
-    display: block;;
+    display: block;
   }
   .benefits-cours .benefits__item {
     width: 100%;
     max-width: 100%;
   }
-  .vertical-line-plus{
+  .vertical-line-plus {
     padding-left: 50px;
   }
 }
@@ -1951,7 +1998,16 @@ input.main-form__submit {
   }
   .benefits-cours .benefits__inner {
     padding-left: 0;
-}
+  }
+  .price-3column .price__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .price-3column .price__list-item {
+    min-width: auto;
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2005,15 +2061,19 @@ input.main-form__submit {
   .description-cours__list-title {
     font-size: 21px;
   }
-  .card-box__item-title{
+  .card-box__item-title {
     padding: 0 20px;
   }
   .card-box__item-text {
     padding: 0 20px;
-
-}
-.vertical-line-plus{
+  }
+  .vertical-line-plus {
     padding-left: 0;
+  }
+  .price__list-num {
+    font-size: 57px;
+    line-height: 52px;
+    margin: 0 5px;
   }
 }
 @media (max-width: 420px) {
