@@ -743,16 +743,16 @@ body {
   width: 100%;
   max-width: 100%;
 }
-.benefits__list-monday{
+.benefits__list-monday {
   grid-template-columns: repeat(4, 1fr);
 }
 .benefits__list-monday .benefits__item--3span {
   grid-column: 1 span;
 }
-.benefits__list-monday .benefits__item{
+.benefits__list-monday .benefits__item {
   width: 150px;
 }
-.benefits__item--4column{
+.benefits__item--4column {
   grid-column: 4 span;
 }
 
@@ -1435,6 +1435,9 @@ vertical-line-plus
 .price-3column .price__list-text {
   max-width: 200px;
 }
+.price__list-item--clickup .price__list-cost {
+  margin-top: 70px;
+}
 
 /* ====== description-cours ======= */
 
@@ -1553,19 +1556,28 @@ vertical-line-plus
 /* ===== viima-text ===== */
 
 .viima-text,
-.monday-text{
+.monday-text,
+.clickup-text {
   font-size: 16px;
   line-height: 29px;
   margin-bottom: 50px;
 }
 .viima-text p,
-.monday-text p{
+.monday-text p,
+.clickup-text p {
   margin-bottom: var(--margin-botom);
+}
+.clickup-text__title{
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: var(--margin-botom);
+  color: var(--second-accent-color);
 }
 
 /* ===== monday-text ====== */
 
-.monday-text a{
+.monday-text a {
   color: rgb(7, 7, 7);
 }
 
@@ -2040,6 +2052,13 @@ vertical-line-plus
 @media (max-width: 480px) {
   .header {
     height: 80vh;
+  }
+  .header-cours .header__content {
+    height: 90vh;
+  }
+  .header-cours .header__text {
+    font-size: 17px;
+    line-height: 29px;
   }
   .header__content {
     height: 80vh;
