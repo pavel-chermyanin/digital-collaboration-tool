@@ -278,17 +278,55 @@ body {
   color: #fff;
   margin-bottom: 30px;
 }
+.header__search-overlay {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+}
+.header__search-overlay.active {
+  display: flex;
+}
+.header__search-input {
+  text-align: center;
+  color: #fff;
+  width: 75%;
+  display: block;
+  font-size: 50px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  padding: 20px;
+  z-index: 1001;
+}
+.header__search-input::placeholder {
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.7);
+}
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: url(../images/close-icon.svg); /*нафантазируйте в ФШ*/
+}
 
 .header-cours {
   height: 70vh;
 }
-.header-wrike{
-    height: 83vh;
-  }
+.header-wrike {
+  height: 83vh;
+}
 .header-cours .header__content {
   height: 84vh;
 }
-.header-wrike .header__content{
+.header-wrike .header__content {
   height: 92vh;
 }
 .header-cours .title {
@@ -529,7 +567,7 @@ body {
   font-size: 18px;
   line-height: 33px;
 }
-.wrapper-link{
+.wrapper-link {
   display: flex;
   justify-content: center;
   margin-bottom: var(--margin-botom);
@@ -606,7 +644,7 @@ body {
   line-height: 29px;
   margin-bottom: 30px;
 }
-.video__list li{
+.video__list li {
   margin-bottom: 5px;
 }
 .video-cours .video__suptext a {
@@ -631,7 +669,7 @@ body {
 .video__box-img {
   min-width: 350px;
 }
-.video__title{
+.video__title {
   font-size: 30px;
   line-height: 39px;
   color: #000;
@@ -687,7 +725,6 @@ body {
   padding: 80px 0;
   margin-bottom: 100px;
 }
-
 
 .benefits__inner {
   display: flex;
@@ -1431,7 +1468,7 @@ vertical-line-plus
   font-weight: 900;
   margin-bottom: 50px;
 }
-.price__list-num{
+.price__list-num {
   font-size: 70px;
   line-height: 56px;
   margin: 0 10px 10px;
@@ -1473,15 +1510,15 @@ vertical-line-plus
 .price__list-item--clickup .price__list-cost {
   margin-top: 70px;
 }
-.price__list--wrike .price__list-cost{
+.price__list--wrike .price__list-cost {
   margin-top: 50px;
 }
-.price__list-item--infinity{
+.price__list-item--infinity {
   margin: 0 auto;
   max-width: 100%;
   width: 90%;
 }
-.price__list-item--infinity .price__list-text{
+.price__list-item--infinity .price__list-text {
   max-width: 100%;
 }
 
@@ -1665,7 +1702,7 @@ vertical-line-plus
   .header-cours {
     height: 75vh;
   }
-  .header-wrike{
+  .header-wrike {
     height: 83vh;
   }
   .header.articles-header {
@@ -1697,6 +1734,12 @@ vertical-line-plus
   }
 }
 @media (max-width: 965px) {
+  .header__search-input {
+    font-size: 30px;
+  }
+  .header__search-input::placeholder {
+    font-size: 30px;
+  }
   .benefits__inner {
     flex-wrap: wrap;
   }
@@ -1856,9 +1899,7 @@ vertical-line-plus
     line-height: 60px;
     margin-bottom: 20px;
   }
-  /* .header {
-    height: 70vh;
-  } */
+
   .header__content {
     padding-left: 0;
     height: 80vh;
@@ -2005,6 +2046,12 @@ vertical-line-plus
   }
 }
 @media (max-width: 660px) {
+  .header__search-input {
+    font-size: 20px;
+  }
+  .header__search-input::placeholder {
+    font-size: 20px;
+  }
   .top-tools__inner {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 60px 40px;
