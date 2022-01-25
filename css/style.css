@@ -496,14 +496,17 @@ input[type="search"]::-webkit-search-cancel-button {
 .menu__list-item:hover svg path {
   fill: #000;
 }
-.menu__sublist-item:hover .menu__sublist-link {
+.menu__sublist-item:hover .menu__sublist-link .menu__list-link {
   color: #000;
 }
 .arrow-down.menu__list-item--sub-menu-active{
   color: #000;
 }
-.arrow-down.menu__list-item--sub-menu-active + svg  path {
+.arrow-down.menu__list-item--sub-menu-active + svg path {
   fill: #000;
+}
+.menu__sublist-item:hover{
+  color: #000;
 }
 .menu__sublist-link {
 }
