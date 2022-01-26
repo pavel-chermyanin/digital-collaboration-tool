@@ -2357,4 +2357,7 @@ vertical-line-plus
   .menu {
     transform: translateX(-300%);
   }
+  .menu__sublist-link{
+    padding: 5px 0;
+  }
 }
