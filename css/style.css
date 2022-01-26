@@ -2268,3 +2268,14 @@ vertical-line-plus
     margin-left: 20px;
   }
 }
+
+/* ======== min-height ========== */
+
+@media(max-height: 768px){
+  .header{
+    height: 100vh;
+  }
+  .header__content{
+    height: 100vh;
+  }
+}
