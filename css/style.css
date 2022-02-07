@@ -1695,7 +1695,7 @@ vertical-line-plus
 
 .events__header {
   height: 53vh;
-  background-size: contain;
+  background-position: top;
 }
 
 .events__header .header__content {
