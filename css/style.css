@@ -115,6 +115,31 @@ body {
   color: #fff;
   z-index: 1;
   border-radius: 5px;
+  position: relative;
+}
+.btn-accent-color:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--third-accent-color);
+  z-index: -1;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  visibility: hidden;
+}
+.btn-accent-color:hover:after {
+  width: 100%;
+  border: 2px solid #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  visibility: visible;
+}
+.btn-accent-color:hover {
 }
 .icon-play::before {
   display: inline-block;
@@ -1668,6 +1693,70 @@ vertical-line-plus
   color: rgb(7, 7, 7);
 }
 
+/* ==== events ==== */
+
+.events__header {
+  height: 53vh;
+}
+
+.events__header .header__content {
+  height: 50vh;
+}
+
+/* ==== title-line-right ==== */
+
+.title-line-right {
+  margin: 100px 0;
+}
+.title-line-right__title {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  color: var(--second-accent-color);
+  padding-right: 100px;
+  position: relative;
+  display: inline-block;
+}
+.title-line-right__title::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 38px;
+  right: 0;
+  top: 19px;
+  transform: rotate(90deg);
+  background-color: #000;
+}
+.events-posts__inner {
+  margin-bottom: 20px;
+  padding-top: 40px;
+  border-top: 1px solid #000;
+}
+.events-posts__item {
+  display: flex;
+  justify-content: space-between;
+}
+.events-posts__item + .events-posts__item {
+  padding-top: 20px;
+}
+.events-posts__item-img {
+  max-width: 550px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+.events-posts__item-title {
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #808285;
+  margin-bottom: 30px;
+}
+.events-posts__item-text {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 45px;
+}
+
 /* ====== adptive ======= */
 
 @media (max-width: 1230px) {
@@ -1717,6 +1806,12 @@ vertical-line-plus
   }
   .header__content.articles-header {
     height: 60vh;
+  }
+  .events__header {
+    height: 53vh;
+  }
+  .events__header .header__content {
+    height: 50vh;
   }
   .header__text {
     font-size: 18px;
@@ -2174,6 +2269,9 @@ vertical-line-plus
   .header__content {
     height: 80vh;
   }
+  .events__header {
+    height: 53vh;
+  }
   .title {
     font-size: 34px;
     line-height: 47px;
@@ -2323,7 +2421,7 @@ vertical-line-plus
     font-size: 24px;
     line-height: 25px;
   }
-    .header__links {
+  .header__links {
     margin-top: 20px;
   }
 }
@@ -2357,7 +2455,7 @@ vertical-line-plus
   .menu {
     transform: translateX(-300%);
   }
-  .menu__sublist-link{
+  .menu__sublist-link {
     padding: 5px 0;
   }
 }
