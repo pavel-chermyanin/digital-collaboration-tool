@@ -130,12 +130,10 @@ body {
   z-index: -1;
   transition: all 0.2s ease-in-out;
   border-radius: 5px;
-  border: 2px solid transparent;
   visibility: hidden;
 }
 .btn-accent-color:hover:after {
   width: 100%;
-  border: 2px solid #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   visibility: visible;
 }
@@ -1697,6 +1695,7 @@ vertical-line-plus
 
 .events__header {
   height: 53vh;
+  background-size: contain;
 }
 
 .events__header .header__content {
